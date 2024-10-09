@@ -8,12 +8,12 @@ node ('ubuntu'){
     stage('Build-and-Tag') {
     /* This builds the actual image; synonymous to
          * docker build on the command line */
-        app = docker.build("amshashree/snake")
+        app = docker.build("amshashree/snake:new")
     }
     stage('Post-to-dockerhub') {
     
      docker.withRegistry('https://registry.hub.docker.com', 'training_creds') {
-            app.push("latest")
+            app.push("new")
         			}
          }
   
