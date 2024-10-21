@@ -35,4 +35,8 @@ node ('ubuntu') {
         sh "docker-compose down"
         sh "docker-compose up -d"
     }
+    stage('DAST')
+    {
+        build 'SECURITY-DAST-OWASP-ZAP'
+    }
 }
