@@ -5,6 +5,9 @@ node ('ubuntu') {
         /* Let's make sure we have the repository cloned to our workspace */
         checkout scm
     }
+    stage('SAST'){
+        build 'SCA-SAST-SNYK'
+    }    
  
     // Stage to build and tag the Docker image
     stage('Build-and-Tag') {
