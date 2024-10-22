@@ -29,7 +29,7 @@
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("amrit96/snake")
+        app = docker.build("amshashree/snake")
 		}
 
     
@@ -58,7 +58,7 @@
    
 		stage('DAST') {
         
-			node('Ubuntu-app-agent'){
+			node('ubuntu'){
            // build 'OWASP-ZAP' 
 
             sh 'echo "DAST Test passed"'
@@ -128,7 +128,7 @@
 	   mimeType: 'text/html',
 
       // recipientProviders: [[$class: 'DevelopersRecipientProvider']]
-	   to: 'trainmefordevsecops@gmail.com'
+	   to: 'amshashree.b@tataelxsi.co.in'
 
      )
 
