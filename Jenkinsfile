@@ -2,7 +2,7 @@
 
  
 
- node ('Ubuntu-app-agent'){
+ node ('ubuntu'){
  
        
 	   def app
